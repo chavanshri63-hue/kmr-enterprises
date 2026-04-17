@@ -52,8 +52,8 @@ export default function ServicesPage() {
         </div>
         <div className="relative h-64 overflow-hidden rounded-2xl border border-white/10 md:h-72">
           <Image
-            src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd?auto=format&fit=crop&w=1200&q=80"
-            alt="Plumbing and civil installation work"
+            src="/images/service-plumbing.jpg"
+            alt="On-site plumbing and civil service work"
             fill
             className="object-cover"
           />

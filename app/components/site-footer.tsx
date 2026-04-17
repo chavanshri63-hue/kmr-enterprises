@@ -9,7 +9,7 @@ export default function SiteFooter() {
             <span className="text-amber-200">KMR</span> Enterprises
           </p>
           <p className="mt-3 text-sm leading-7 text-slate-300">
-            Building infrastructure with strength, precision, and over 30 years of field experience.
+            Infrastructure | Engineering | Real Estate
           </p>
         </div>
         <div>
@@ -33,6 +33,26 @@ export default function SiteFooter() {
             <p>
               <a href="mailto:info@kmrenterprisesindia.com" className="hover:text-amber-300">
                 info@kmrenterprisesindia.com
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://wa.me/919822303371"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-amber-300"
+              >
+                WhatsApp: +91 9822303371
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://www.instagram.com/kmr.enterprises?igsh=MTFuNmNydGxyYTZ5Yg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-amber-300"
+              >
+                Instagram: @kmr.enterprises
               </a>
             </p>
           </div>

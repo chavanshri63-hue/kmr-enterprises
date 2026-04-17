@@ -11,26 +11,22 @@ const projectTypes = [
   {
     title: "Commercial Projects",
     description: "Offices, malls, shops, and business spaces with complete infrastructure and plumbing support.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/project-commercial.jpg",
   },
   {
     title: "Residential Projects",
     description: "Apartments, housing societies, and buildings for both new developments and upgrades.",
-    image:
-      "https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/project-residential.jpg",
   },
   {
     title: "Industrial Projects",
     description: "Factories, warehouses, and industrial infrastructure requiring durable execution.",
-    image:
-      "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/project-industrial.jpg",
   },
   {
     title: "Bungalow Projects",
     description: "Complete construction and plumbing solutions for independent homes.",
-    image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/project-bungalow.jpg",
   },
 ];
 

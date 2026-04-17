@@ -70,7 +70,15 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="rounded-full border border-emerald-500/70 px-5 py-2 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/10"
             >
-              WhatsApp
+              WhatsApp 9822303371
+            </a>
+            <a
+              href="https://www.instagram.com/kmr.enterprises?igsh=MTFuNmNydGxyYTZ5Yg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-pink-400/70 px-5 py-2 text-sm font-semibold text-pink-300 transition hover:bg-pink-500/10"
+            >
+              Instagram
             </a>
           </div>
         </article>

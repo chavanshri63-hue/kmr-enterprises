@@ -39,7 +39,7 @@ export default function AboutPage() {
       <div className="space-y-6">
         <div className="relative h-64 overflow-hidden rounded-2xl border border-white/10 md:h-72">
           <Image
-            src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1200&q=80"
+            src="/images/about-team.jpg"
             alt="Civil construction site team"
             fill
             className="object-cover"

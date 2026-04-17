@@ -12,7 +12,7 @@ export default function Home() {
     <div>
       <section className="relative isolate overflow-hidden border-b border-white/10">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80"
+          src="/images/hero-construction.jpg"
           alt="Construction site infrastructure work"
           fill
           priority
