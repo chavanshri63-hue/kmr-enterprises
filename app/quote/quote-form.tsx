@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type SelectWithOtherProps = {
   label: string;
@@ -50,7 +51,45 @@ function SelectWithOther({ label, name, options, required }: SelectWithOtherProp
 const inputClass =
   "rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500";
 
+type Status = "idle" | "submitting" | "error";
+
 export default function QuoteForm() {
+  const router = useRouter();
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.set("form-name", "quote");
+
+    setStatus("submitting");
+    setErrorMsg("");
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok || response.status === 0) {
+        router.push("/quote/thank-you");
+        return;
+      }
+
+      setStatus("error");
+      setErrorMsg(
+        "Submission failed. Please try again, or reach us on WhatsApp / phone directly."
+      );
+    } catch {
+      setStatus("error");
+      setErrorMsg(
+        "Network error. Please try again, or reach us on WhatsApp / phone directly."
+      );
+    }
+  }
+
   return (
     <form
       name="quote"
@@ -58,7 +97,7 @@ export default function QuoteForm() {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       encType="multipart/form-data"
-      action="/quote/thank-you"
+      onSubmit={handleSubmit}
       className="mt-10 space-y-10"
     >
       <input type="hidden" name="form-name" value="quote" />
@@ -237,21 +276,29 @@ export default function QuoteForm() {
         </div>
       </section>
 
-      <div className="flex flex-wrap items-center gap-4">
-        <button
-          type="submit"
-          className="rounded-full border border-slate-500 px-8 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
-        >
-          Submit Quote Request
-        </button>
-        <a
-          href="https://wa.me/919822303371?text=Hi%20KMR%20Enterprises%2C%20I%27d%20like%20to%20request%20a%20quote%20for%20my%20project."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full border border-slate-500 px-8 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
-        >
-          Or Ask on WhatsApp
-        </a>
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-4">
+          <button
+            type="submit"
+            disabled={status === "submitting"}
+            className="rounded-full border border-slate-500 px-8 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {status === "submitting" ? "Submitting..." : "Submit Quote Request"}
+          </button>
+          <a
+            href="https://wa.me/919822303371?text=Hi%20KMR%20Enterprises%2C%20I%27d%20like%20to%20request%20a%20quote%20for%20my%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-slate-500 px-8 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
+          >
+            Or Ask on WhatsApp
+          </a>
+        </div>
+        {status === "error" ? (
+          <p className="rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+            {errorMsg}
+          </p>
+        ) : null}
       </div>
     </form>
   );
