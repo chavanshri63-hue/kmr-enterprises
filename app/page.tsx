@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroSlider from "./components/hero-slider";
 
 const keyHighlights = [
   "30+ years of civil and infrastructure experience",
@@ -10,6 +11,7 @@ const keyHighlights = [
 export default function Home() {
   return (
     <div>
+      <HeroSlider />
       <section className="relative isolate overflow-hidden border-b border-zinc-200">
         <Image
           src="/images/hero-construction.jpg"

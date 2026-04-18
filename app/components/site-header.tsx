@@ -37,12 +37,12 @@ export default function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link
-          href="/quote"
+        <a
+          href="tel:+919822303371"
           className="rounded-full border border-zinc-300 px-4 py-2 text-xs font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500 md:text-sm"
         >
-          Request Quote
-        </Link>
+          Call Now
+        </a>
       </div>
     </header>
   );

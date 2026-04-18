@@ -18,7 +18,7 @@ export default function SiteFooter() {
             <Link href="/about" className="hover:text-red-500">About Us</Link>
             <Link href="/services" className="hover:text-red-500">Our Services</Link>
             <Link href="/projects" className="hover:text-red-500">Projects</Link>
-            <Link href="/quote" className="hover:text-red-500">Request Quote</Link>
+            <a href="tel:+919822303371" className="hover:text-red-500">Call Now</a>
             <Link href="/contact" className="hover:text-red-500">Contact</Link>
           </div>
         </div>
