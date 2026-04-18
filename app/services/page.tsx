@@ -38,14 +38,14 @@ export default function ServicesPage() {
     <div className="mx-auto w-full max-w-6xl px-6 py-16">
       <div className="mb-10 grid gap-8 md:grid-cols-2">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">Our Services</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-red-500">Our Services</p>
           <h1 className="mt-3 text-4xl font-bold">Complete Contracting Solutions</h1>
           <p className="mt-4 leading-8 text-slate-300">
             We provide end-to-end civil, plumbing, and fire fighting execution for residential, commercial, industrial, and bungalow projects.
           </p>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-200"
+            className="mt-6 inline-block rounded-full border border-slate-500 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
           >
             Request Service Consultation
           </Link>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
 
       <div className="grid gap-6 lg:grid-cols-3">
         <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-          <h2 className="text-xl font-semibold text-amber-200">Infrastructure & Civil Works</h2>
+          <h2 className="text-xl font-semibold text-blue-300">Infrastructure & Civil Works</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-300">
             {civilServices.map((service) => (
               <li key={service}>• {service}</li>
@@ -70,7 +70,7 @@ export default function ServicesPage() {
           </ul>
         </article>
         <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-          <h2 className="text-xl font-semibold text-amber-200">Plumbing Works</h2>
+          <h2 className="text-xl font-semibold text-blue-300">Plumbing Works</h2>
           <p className="mt-4 text-sm font-semibold text-slate-100">External Plumbing</p>
           <ul className="mt-2 space-y-2 text-sm text-slate-300">
             {externalPlumbing.map((service) => (
@@ -85,7 +85,7 @@ export default function ServicesPage() {
           </ul>
         </article>
         <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-          <h2 className="text-xl font-semibold text-amber-200">Fire Fighting Works</h2>
+          <h2 className="text-xl font-semibold text-blue-300">Fire Fighting Works</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-300">
             {fireFightingServices.map((service) => (
               <li key={service}>• {service}</li>

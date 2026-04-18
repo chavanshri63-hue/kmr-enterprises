@@ -34,7 +34,7 @@ export default function ProjectsPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-16">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">Project Expertise</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-red-500">Project Expertise</p>
         <h1 className="mt-3 text-4xl font-bold">Execution Across Multiple Sectors</h1>
         <p className="mt-4 leading-8 text-slate-300">
           We handle all types of projects including new construction, renovation, and system upgrades with focus on quality, safety, and timeline discipline.
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
               <Image src={project.image} alt={project.title} fill className="object-cover" />
             </div>
             <div className="p-6">
-              <h2 className="text-xl font-semibold text-amber-200">{project.title}</h2>
+              <h2 className="text-xl font-semibold text-blue-300">{project.title}</h2>
               <p className="mt-3 text-sm leading-7 text-slate-300">{project.description}</p>
             </div>
           </article>
@@ -56,13 +56,13 @@ export default function ProjectsPage() {
       </div>
 
       <div className="mt-10 rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-        <h2 className="text-2xl font-semibold text-amber-200">Need sector-specific execution support?</h2>
+        <h2 className="text-2xl font-semibold text-blue-300">Need sector-specific execution support?</h2>
         <p className="mt-3 text-sm leading-7 text-slate-300">
           Share project scope and we will propose suitable construction, plumbing, and fire fighting execution plans.
         </p>
         <Link
           href="/contact"
-          className="mt-5 inline-block rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-200"
+          className="mt-5 inline-block rounded-full border border-slate-500 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
         >
           Contact Project Team
         </Link>
