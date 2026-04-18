@@ -11,7 +11,7 @@ const navItems = [
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-blue-400/15 bg-slate-950/90 backdrop-blur supports-[backdrop-filter]:bg-slate-950/75">
+    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -22,15 +22,15 @@ export default function SiteHeader() {
             className="h-11 w-11 rounded-md bg-white object-contain md:h-14 md:w-14"
           />
           <span className="flex flex-col">
-            <span className="text-xl font-semibold tracking-wide text-blue-300 md:text-2xl">
+            <span className="text-xl font-semibold tracking-wide text-blue-800 md:text-2xl">
               KMR Enterprises
             </span>
-            <span className="hidden text-[11px] font-medium tracking-wide text-slate-300 md:block">
+            <span className="text-[10px] font-medium tracking-wide text-zinc-600 md:text-xs">
               Infrastructure | Engineering | Real Estate
             </span>
           </span>
         </Link>
-        <nav className="hidden gap-5 text-sm font-medium text-slate-200 md:flex">
+        <nav className="hidden gap-5 text-sm font-medium text-zinc-800 md:flex">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="transition-colors hover:text-red-500">
               {item.label}
@@ -39,7 +39,7 @@ export default function SiteHeader() {
         </nav>
         <Link
           href="/quote"
-          className="rounded-full border border-slate-500 px-4 py-2 text-xs font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500 md:text-sm"
+          className="rounded-full border border-zinc-300 px-4 py-2 text-xs font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500 md:text-sm"
         >
           Request Quote
         </Link>

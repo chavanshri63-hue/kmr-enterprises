@@ -15,7 +15,7 @@ function SelectWithOther({ label, name, options, required }: SelectWithOtherProp
 
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={name} className="text-sm font-medium text-slate-200">
+      <label htmlFor={name} className="text-sm font-medium text-zinc-800">
         {label}
         {required ? <span className="text-red-500"> *</span> : null}
       </label>
@@ -25,7 +25,7 @@ function SelectWithOther({ label, name, options, required }: SelectWithOtherProp
         required={required}
         value={value}
         onChange={(event) => setValue(event.target.value)}
-        className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
+        className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
       >
         <option value="">Select an option</option>
         {options.map((opt) => (
@@ -41,7 +41,7 @@ function SelectWithOther({ label, name, options, required }: SelectWithOtherProp
           name={`${name}_other`}
           placeholder={`Please specify your ${label.toLowerCase()}`}
           required={required}
-          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
+          className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
         />
       ) : null}
     </div>
@@ -49,7 +49,7 @@ function SelectWithOther({ label, name, options, required }: SelectWithOtherProp
 }
 
 const inputClass =
-  "rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500";
+  "rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500";
 
 type Status = "idle" | "submitting" | "error";
 
@@ -107,17 +107,17 @@ export default function QuoteForm() {
         </label>
       </p>
 
-      <section className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-        <h2 className="text-xl font-semibold text-blue-300">1. Your Details</h2>
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-xl font-semibold text-blue-800">1. Your Details</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-sm font-medium text-slate-200">
+            <label htmlFor="name" className="text-sm font-medium text-zinc-800">
               Full Name<span className="text-red-500"> *</span>
             </label>
             <input id="name" name="name" type="text" required className={inputClass} />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="phone" className="text-sm font-medium text-slate-200">
+            <label htmlFor="phone" className="text-sm font-medium text-zinc-800">
               Phone<span className="text-red-500"> *</span>
             </label>
             <input
@@ -131,7 +131,7 @@ export default function QuoteForm() {
             />
           </div>
           <div className="flex flex-col gap-2 md:col-span-2">
-            <label htmlFor="email" className="text-sm font-medium text-slate-200">
+            <label htmlFor="email" className="text-sm font-medium text-zinc-800">
               Email (optional)
             </label>
             <input id="email" name="email" type="email" className={inputClass} />
@@ -139,8 +139,8 @@ export default function QuoteForm() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-        <h2 className="text-xl font-semibold text-blue-300">2. Project Details</h2>
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-xl font-semibold text-blue-800">2. Project Details</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <SelectWithOther
             label="Service Needed"
@@ -170,7 +170,7 @@ export default function QuoteForm() {
             ]}
           />
           <div className="flex flex-col gap-2">
-            <label htmlFor="area" className="text-sm font-medium text-slate-200">
+            <label htmlFor="area" className="text-sm font-medium text-zinc-800">
               Estimated Area (sq. ft.)
             </label>
             <input
@@ -182,7 +182,7 @@ export default function QuoteForm() {
             />
           </div>
           <div className="flex flex-col gap-2 md:col-span-2">
-            <label htmlFor="location" className="text-sm font-medium text-slate-200">
+            <label htmlFor="location" className="text-sm font-medium text-zinc-800">
               Project Location<span className="text-red-500"> *</span>
             </label>
             <input
@@ -197,8 +197,8 @@ export default function QuoteForm() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-        <h2 className="text-xl font-semibold text-blue-300">3. Timeline & Budget</h2>
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-xl font-semibold text-blue-800">3. Timeline & Budget</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <SelectWithOther
             label="Preferred Start Timeline"
@@ -220,8 +220,8 @@ export default function QuoteForm() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-        <h2 className="text-xl font-semibold text-blue-300">4. Additional Info</h2>
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-xl font-semibold text-blue-800">4. Additional Info</h2>
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <SelectWithOther
             label="Preferred Contact Method"
@@ -234,22 +234,22 @@ export default function QuoteForm() {
             options={["Google Search", "Instagram", "Referral / Word of Mouth", "Past Client"]}
           />
           <div className="flex flex-col gap-2 md:col-span-2">
-            <label className="text-sm font-medium text-slate-200">Site Visit Required?</label>
-            <div className="flex gap-6 text-sm text-slate-300">
+            <label className="text-sm font-medium text-zinc-800">Site Visit Required?</label>
+            <div className="flex gap-6 text-sm text-zinc-600">
               <label className="flex items-center gap-2">
-                <input type="radio" name="site_visit" value="Yes" className="accent-red-500" /> Yes
+                <input type="radio" name="site_visit" value="Yes" className="accent-red-600" /> Yes
               </label>
               <label className="flex items-center gap-2">
-                <input type="radio" name="site_visit" value="No" className="accent-red-500" /> No
+                <input type="radio" name="site_visit" value="No" className="accent-red-600" /> No
               </label>
               <label className="flex items-center gap-2">
-                <input type="radio" name="site_visit" value="Not Sure" className="accent-red-500" />{" "}
+                <input type="radio" name="site_visit" value="Not Sure" className="accent-red-600" />{" "}
                 Not Sure
               </label>
             </div>
           </div>
           <div className="flex flex-col gap-2 md:col-span-2">
-            <label htmlFor="description" className="text-sm font-medium text-slate-200">
+            <label htmlFor="description" className="text-sm font-medium text-zinc-800">
               Project Description / Specific Requirements
             </label>
             <textarea
@@ -261,7 +261,7 @@ export default function QuoteForm() {
             />
           </div>
           <div className="flex flex-col gap-2 md:col-span-2">
-            <label htmlFor="attachment" className="text-sm font-medium text-slate-200">
+            <label htmlFor="attachment" className="text-sm font-medium text-zinc-800">
               Attach Drawings / Plans / Reference Photos (optional)
             </label>
             <input
@@ -269,9 +269,9 @@ export default function QuoteForm() {
               name="attachment"
               type="file"
               accept=".pdf,.jpg,.jpeg,.png,.dwg"
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-300 file:mr-3 file:rounded-md file:border-0 file:bg-slate-800 file:px-3 file:py-1 file:text-xs file:text-slate-200"
+              className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-600 file:mr-3 file:rounded-md file:border-0 file:bg-zinc-100 file:px-3 file:py-1 file:text-xs file:text-zinc-800"
             />
-            <p className="text-xs text-slate-400">PDF, JPG, PNG, DWG — max 8 MB</p>
+            <p className="text-xs text-zinc-500">PDF, JPG, PNG, DWG — max 8 MB</p>
           </div>
         </div>
       </section>
@@ -281,7 +281,7 @@ export default function QuoteForm() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="rounded-full border border-slate-500 px-8 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500 disabled:cursor-not-allowed disabled:opacity-60"
+            className="rounded-full border border-zinc-300 px-8 py-3 text-sm font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {status === "submitting" ? "Submitting..." : "Submit Quote Request"}
           </button>
@@ -289,7 +289,7 @@ export default function QuoteForm() {
             href="https://wa.me/919822303371?text=Hi%20KMR%20Enterprises%2C%20I%27d%20like%20to%20request%20a%20quote%20for%20my%20project."
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-slate-500 px-8 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
+            className="rounded-full border border-zinc-300 px-8 py-3 text-sm font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500"
           >
             Or Ask on WhatsApp
           </a>

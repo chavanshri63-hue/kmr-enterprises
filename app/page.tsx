@@ -10,7 +10,7 @@ const keyHighlights = [
 export default function Home() {
   return (
     <div>
-      <section className="relative isolate overflow-hidden border-b border-white/10">
+      <section className="relative isolate overflow-hidden border-b border-zinc-200">
         <Image
           src="/images/hero-construction.jpg"
           alt="Construction site infrastructure work"
@@ -18,36 +18,36 @@ export default function Home() {
           priority
           className="-z-20 object-cover"
         />
-        <div className="-z-10 absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/75 to-blue-950/80" />
+        <div className="-z-10 absolute inset-0 bg-gradient-to-br from-white/90 via-zinc-50/85 to-blue-50/90" />
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-24 md:grid-cols-2 md:py-28">
           <div className="space-y-6">
-            <p className="inline-block rounded-full border border-red-500/50 bg-red-600/10 px-4 py-1 text-sm font-medium text-blue-300">
+            <p className="inline-block rounded-full border border-red-500/50 bg-red-600/10 px-4 py-1 text-sm font-medium text-blue-800">
               KMR Enterprises | Building Infrastructure with Strength, Precision & 30+ Years of Experience
             </p>
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-              <span className="text-blue-300">KMR Enterprises</span> for End-to-End Civil, Plumbing and Fire Fighting Solutions
+            <h1 className="text-4xl font-bold leading-tight text-blue-800 md:text-5xl">
+              KMR Enterprises for End-to-End Civil, Plumbing and Fire Fighting Solutions
             </h1>
-            <p className="text-base leading-8 text-slate-200 md:text-lg">
+            <p className="text-base leading-8 text-zinc-800 md:text-lg">
               KMR Enterprises is a trusted Pune-based contracting company delivering quality infrastructure work for new construction and renovation projects.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/services"
-                className="rounded-full border border-slate-500 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
+                className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500"
               >
                 View Services
               </Link>
               <Link
                 href="/contact"
-                className="rounded-full border border-slate-300/50 px-6 py-3 text-sm font-semibold transition hover:border-blue-300 hover:text-blue-300"
+                className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500"
               >
                 Contact Team
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl border border-blue-400/20 bg-slate-950/70 p-6 shadow-xl shadow-blue-950/30 backdrop-blur">
-            <h2 className="text-xl font-semibold text-blue-300">Why KMR Enterprises</h2>
-            <ul className="mt-4 space-y-3 text-slate-200">
+          <div className="rounded-2xl border border-zinc-200 bg-white/80 p-6 shadow-xl shadow-zinc-900/10 backdrop-blur">
+            <h2 className="text-xl font-semibold text-blue-800">Why KMR Enterprises</h2>
+            <ul className="mt-4 space-y-3 text-zinc-800">
               {keyHighlights.map((point) => (
                 <li key={point} className="flex gap-3">
                   <span className="text-red-500">●</span>
@@ -61,30 +61,30 @@ export default function Home() {
 
       <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid gap-6 md:grid-cols-3">
-          <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <h3 className="text-xl font-semibold text-blue-300">About KMR Enterprises</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">
+          <article className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <h3 className="text-xl font-semibold text-blue-800">About KMR Enterprises</h3>
+            <p className="mt-3 text-sm leading-7 text-zinc-600">
               Founded on a legacy that started in 1995 and now led by engineer Krishna Mohan Rathod.
             </p>
-            <Link href="/about" className="mt-4 inline-block text-sm font-semibold text-red-500 hover:text-blue-300">
+            <Link href="/about" className="mt-4 inline-block text-sm font-semibold text-red-500 hover:text-blue-800">
               Read full story →
             </Link>
           </article>
-          <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <h3 className="text-xl font-semibold text-blue-300">Our Services</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">
+          <article className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <h3 className="text-xl font-semibold text-blue-800">Our Services</h3>
+            <p className="mt-3 text-sm leading-7 text-zinc-600">
               Civil works, external and internal plumbing, and complete fire fighting piping support.
             </p>
-            <Link href="/services" className="mt-4 inline-block text-sm font-semibold text-red-500 hover:text-blue-300">
+            <Link href="/services" className="mt-4 inline-block text-sm font-semibold text-red-500 hover:text-blue-800">
               Explore services →
             </Link>
           </article>
-          <article className="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-            <h3 className="text-xl font-semibold text-blue-300">Project Expertise</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-300">
+          <article className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <h3 className="text-xl font-semibold text-blue-800">Project Expertise</h3>
+            <p className="mt-3 text-sm leading-7 text-zinc-600">
               We execute commercial, residential, industrial, and bungalow projects of varying scale.
             </p>
-            <Link href="/projects" className="mt-4 inline-block text-sm font-semibold text-red-500 hover:text-blue-300">
+            <Link href="/projects" className="mt-4 inline-block text-sm font-semibold text-red-500 hover:text-blue-800">
               See project sectors →
             </Link>
           </article>

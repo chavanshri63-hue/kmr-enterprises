@@ -36,33 +36,33 @@ export default function ProjectsPage() {
       <div className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-wider text-red-500">Project Expertise</p>
         <h1 className="mt-3 text-4xl font-bold">Execution Across Multiple Sectors</h1>
-        <p className="mt-4 leading-8 text-slate-300">
+        <p className="mt-4 leading-8 text-zinc-600">
           We handle all types of projects including new construction, renovation, and system upgrades with focus on quality, safety, and timeline discipline.
         </p>
       </div>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {projectTypes.map((project) => (
-          <article key={project.title} className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+          <article key={project.title} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="relative h-56">
               <Image src={project.image} alt={project.title} fill className="object-cover" />
             </div>
             <div className="p-6">
-              <h2 className="text-xl font-semibold text-blue-300">{project.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{project.description}</p>
+              <h2 className="text-xl font-semibold text-blue-800">{project.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">{project.description}</p>
             </div>
           </article>
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl border border-white/10 bg-slate-900/60 p-6">
-        <h2 className="text-2xl font-semibold text-blue-300">Need sector-specific execution support?</h2>
-        <p className="mt-3 text-sm leading-7 text-slate-300">
+      <div className="mt-10 rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-2xl font-semibold text-blue-800">Need sector-specific execution support?</h2>
+        <p className="mt-3 text-sm leading-7 text-zinc-600">
           Share project scope and we will propose suitable construction, plumbing, and fire fighting execution plans.
         </p>
         <Link
           href="/contact"
-          className="mt-5 inline-block rounded-full border border-slate-500 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-red-500 hover:text-red-500"
+          className="mt-5 inline-block rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition hover:border-red-500 hover:text-red-500"
         >
           Contact Project Team
         </Link>

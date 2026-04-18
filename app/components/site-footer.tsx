@@ -2,19 +2,19 @@ import Link from "next/link";
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t-4 border-red-600 bg-slate-950 bg-gradient-to-b from-slate-950 to-blue-950/30">
+    <footer className="border-t-4 border-red-600 bg-zinc-100 bg-gradient-to-b from-white to-blue-50">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-10 md:grid-cols-3">
         <div>
-          <p className="text-lg font-semibold text-slate-100">
-            <span className="text-blue-300">KMR</span> Enterprises
+          <p className="text-lg font-semibold text-blue-800">
+            KMR Enterprises
           </p>
-          <p className="mt-3 text-sm leading-7 text-slate-300">
+          <p className="mt-3 text-sm leading-7 text-zinc-600">
             Infrastructure | Engineering | Real Estate
           </p>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-slate-100">Quick Links</p>
-          <div className="mt-3 flex flex-col gap-2 text-sm text-slate-300">
+          <p className="text-sm font-semibold uppercase tracking-wider text-zinc-900">Quick Links</p>
+          <div className="mt-3 flex flex-col gap-2 text-sm text-zinc-600">
             <Link href="/about" className="hover:text-red-500">About Us</Link>
             <Link href="/services" className="hover:text-red-500">Our Services</Link>
             <Link href="/projects" className="hover:text-red-500">Projects</Link>
@@ -23,8 +23,8 @@ export default function SiteFooter() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-slate-100">Contact</p>
-          <div className="mt-3 space-y-2 text-sm text-slate-300">
+          <p className="text-sm font-semibold uppercase tracking-wider text-zinc-900">Contact</p>
+          <div className="mt-3 space-y-2 text-sm text-zinc-600">
             <p>Pune, Maharashtra</p>
             <p>
               <a href="tel:+919822303371" className="hover:text-red-500">+91 9822303371</a>
